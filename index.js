@@ -26,7 +26,7 @@ app.get('/board/:id', function (req, res) {
   client.send('oh', 'hi')
 
   board_exchange.on(req.params.id, function (board) {
-    client.send('new-board', JSON.stringify(board))
+    client.send('board', JSON.stringify(board))
   })
 
   var interval = setInterval(function () {
