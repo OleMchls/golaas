@@ -9,9 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "jade": "^1.11.0",
     "node-uuid": "^1.4.3",
-    "sse-stream": "segmentio/sse-stream"
+    "sse": "0.0.6"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "fusile": "^1.0.3",
+    "node-sass": "^3.3.3"
   }
 }
