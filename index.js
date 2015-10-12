@@ -6,6 +6,7 @@ var bodyParser = require('body-parser')
 
 var app = express()
 var board_exchange = new EventEmitter()
+board_exchange.setMaxListeners(1024)
 
 app.set('view engine', 'jade')
 
