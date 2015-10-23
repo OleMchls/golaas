@@ -32,7 +32,7 @@ app.get('/board/:id', function (req, res) {
 
   var interval = setInterval(function () {
     client.send('heartbeat', '<3')
-  }, 10000)
+  }, 1000)
   client.on('close', function () {
     console.log(`client (${req.params.id}) gone`)
     clearInterval(interval)
