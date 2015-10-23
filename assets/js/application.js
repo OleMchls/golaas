@@ -31,6 +31,14 @@ function draw (board) {
   const DPI = Math.floor(sizeWidth / board_height)
 
   ctx.clearRect(0, 0, sizeWidth, sizeHeight)
+
+  ctx.fillStyle = 'rgb(240,240,240)'
+  for (var i = 0; i <= board_height; i++) {
+    ctx.fillRect(0, i * DPI, board_width * DPI, 1)
+    ctx.fillRect(i * DPI, 0, 1, board_width * DPI)
+  }
+
+  ctx.fillStyle = 'black'
   board.forEach(function (row, y) {
     row.forEach(function (state, x) {
       if (state) {
