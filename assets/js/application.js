@@ -28,7 +28,7 @@ function draw (board) {
   let sizeWidth = ctx.canvas.clientWidth
   let sizeHeight = ctx.canvas.clientHeight
 
-  const DPI = Math.floor(sizeWidth / board_height)
+  const DPI = sizeWidth / board_height
 
   canvas.width = sizeWidth
   canvas.height = sizeHeight
