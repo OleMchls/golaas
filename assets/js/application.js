@@ -19,8 +19,8 @@ requestAnimationFrame(function step () {
   requestAnimationFrame(step)
 })
 
-let board = document.getElementById('board')
-let ctx = board.getContext('2d')
+let canvas = document.getElementById('board')
+let ctx = canvas.getContext('2d')
 
 function draw (board) {
   let board_height = board.length
@@ -29,6 +29,9 @@ function draw (board) {
   let sizeHeight = ctx.canvas.clientHeight
 
   const DPI = Math.floor(sizeWidth / board_height)
+
+  canvas.width = sizeWidth
+  canvas.height = sizeHeight
 
   ctx.clearRect(0, 0, sizeWidth, sizeHeight)
 
@@ -42,7 +45,7 @@ function draw (board) {
   board.forEach(function (row, y) {
     row.forEach(function (state, x) {
       if (state) {
-        ctx.fillRect(x * DPI, y * DPI, DPI - 1, DPI - 1)
+        ctx.fillRect(x * DPI + 1, y * DPI + 1, DPI - 1, DPI - 1)
       }
     })
   })

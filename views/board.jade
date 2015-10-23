@@ -4,9 +4,18 @@ block title
   title Game of Life ##{id}
 
 block content
-  h1 Watch the Game of Life
-    small!= id
-
-  canvas#board(width='800px', height='800px')
-
-  span#update
+  .container-fluid
+    .row
+      .col-md-8
+        canvas#board(width='300', height='300')
+      .col-md-4
+        h1 Watch the Game of Life <br />
+          small!= id
+          
+        p Send in your board in via HTTP
+            pre
+              code curl -X POST http://golass.com/#{id} -H "Content-Type: application/json" --data "[[0,1,0],[1,1,1],[0,1,0]]"
+            .long-explanation Again, golaas.com is not about running Game of Life for you, it's a way to handle the view and dispaly of your board. So get your hands dirty and get some cells to life!
+        
+        small Last heartbeat received: 
+          span#update
