@@ -13,9 +13,10 @@ block content
           small!= id
           
         p Send in your board in via HTTP
-            pre
-              code curl -X POST http://golass.com/#{id} -H "Content-Type: application/json" --data "[[0,1,0],[1,1,1],[0,1,0]]"
-            .long-explanation Again, golaas.com is not about running Game of Life for you, it's a way to handle the view and dispaly of your board. So get your hands dirty and get some cells to life!
+          pre
+            code curl -X POST http://golass.com/#{id} -H "Content-Type: application/json" --data "[[0,1,0],[1,1,1],[0,1,0]]"
+        p.long-explanation Again, golaas.com is not about running Game of Life for you, it's a way to handle the view and dispaly of your board.
+        p.long-explanation So get your hands dirty and get some cells to life!
         
         small Last heartbeat received: 
           span#update
