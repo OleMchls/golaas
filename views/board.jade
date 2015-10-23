@@ -6,9 +6,9 @@ block title
 block content
   .container-fluid
     .row
-      .col-md-8
+      .col-md-9
         canvas#board(width='300', height='300')
-      .col-md-4
+      .col-md-3
         h1 Watch the Game of Life <br />
           small!= id
           
@@ -17,6 +17,9 @@ block content
             code curl -X POST http://golass.com/#{id} -H "Content-Type: application/json" --data "[[0,1,0],[1,1,1],[0,1,0]]"
         p.long-explanation Again, golaas.com is not about running Game of Life for you, it's a way to handle the view and dispaly of your board.
         p.long-explanation So get your hands dirty and get some cells to life!
+        
+        p
+          a(href='https://gist.github.com/nesQuick/f4af93190d0d844fa9db') Ruby example implementation.
         
         small Last heartbeat received: 
           span#update
