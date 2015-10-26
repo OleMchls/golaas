@@ -27,4 +27,6 @@ build/Release
 node_modules
 
 # fusile virtual fs
-public
+public/js
+public/style
+public/fonts
