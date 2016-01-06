@@ -8,21 +8,24 @@ block content
     source(src='public/background.webm' type='video/webm')
     source(src='public/background.mp4' type='video/mp4')
       
-  .jumbotron
-    .container
-      h1 Game of Life
-      p The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves or, for advanced players, by creating patterns with particular properties.
-      a(class='btn btn-lg btn-primary', href="/#{hash}") GET STARTED NOW
-    
   .container
     .row
+      .col-md-12
+        p 
+    .jumbotron(style='padding-top: 20px')
+      .container
+        h1 Game of Life as a Service
+        p Game of Life is a great way to learn a new programming language or just doing some programming exercise. But visualize the game progress is often the most boring part, or will even jsut be left out completly. Golaas is here to change! 
+        p With Golaas.com you will simply get your own game board hash where you can send a HTTP POST request to and it will magically appear on your gameboard while you implement the logic. 
+        a(class='btn btn-lg btn-primary', href="/#{hash}") GET STARTED NOW
+        
+    .row
       .col-md-12.welcome-content
-        h1 Game of Life
+        h2 Game of Life
         p The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970. The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves or, for advanced players, by creating patterns with particular properties.
-        a(class='btn btn-lg btn-default', href="/#{hash}") GET STARTED NOW
 
-        h2 What's that?
-        p Lorem Ipsum
+        h3 How is it played?
+        p The universe of the Game of Life is an infinite two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead. Every cell interacts with its eight neighbours, which are the cells that are directly horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
 
         h3 4 simple rules
         ol
@@ -30,3 +33,12 @@ block content
           li Any live cell with two or three live neighbours lives on to the next generation.
           li Any live cell with more than three live neighbours dies, as if by over-population.
           li Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+        p The initial pattern constitutes the 'seed' of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed — births and deaths happen simultaneously, and the discrete moment at which this happens is sometimes called a tick. (In other words, each generation is a pure function of the one before.) The rules continue to be applied repeatedly to create further generations. 
+          
+        h3 Ready? 
+        p
+          a(class='btn btn-lg btn-primary', href="/#{hash}") Get your game board!
+
+        hr
+        p A labour of love project brought to you by 
+         a(href="https://twitter.com/codestars") @CodeStars
